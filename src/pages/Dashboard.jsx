@@ -45,8 +45,8 @@ const statCards = [
 
 const quickActions = [
   { label: "Modifier les textes", path: "/cms/texts" },
-  { label: "Gerer les medias", path: "/cms/media" },
-  { label: "Contact & reseaux", path: "/cms/contact" },
+  { label: "Gérer les médias", path: "/cms/media" },
+  { label: "Contact & réseaux", path: "/cms/contact" },
   { label: "FAQ", path: "/cms/faq" },
 ];
 
@@ -106,7 +106,7 @@ const Dashboard = () => {
             Voir les messages
           </button>
           <button className="db-btn" onClick={() => navigate("/cms/media")}>
-            Medias
+            Médias
           </button>
         </div>
       </header>
@@ -133,7 +133,7 @@ const Dashboard = () => {
             </svg>
           </span>
           <span className="db-stat-body">
-            <span className="db-stat-label">Messages traites</span>
+            <span className="db-stat-label">Messages traités</span>
             <span className="db-stat-value">{readRate}%</span>
           </span>
         </div>
@@ -143,7 +143,7 @@ const Dashboard = () => {
         <section className="db-panel db-messages-panel">
           <div className="db-panel-head">
             <div>
-              <h2>Messages recents</h2>
+              <h2>Messages récents</h2>
               <p>{latestMessage ? `Dernier message de ${latestMessage.nom}` : "Aucun message pour le moment"}</p>
             </div>
             <button className="db-link-btn" onClick={() => navigate("/messages")}>
@@ -154,7 +154,7 @@ const Dashboard = () => {
           {loading ? (
             <div className="db-loading">Chargement des donnees...</div>
           ) : stats.recent_messages.length === 0 ? (
-            <div className="db-empty">Aucun message recu pour le moment.</div>
+            <div className="db-empty">Aucun message reçu pour le moment.</div>
           ) : (
             <div className="db-message-list">
               {stats.recent_messages.map((msg) => (
@@ -207,7 +207,7 @@ const Dashboard = () => {
               <span style={{ width: `${readRate}%` }} />
             </div>
             <p>
-              {readMessages} message{readMessages > 1 ? "s" : ""} traite{readMessages > 1 ? "s" : ""} sur {stats.total_messages}.
+              {readMessages} message{readMessages > 1 ? "s" : ""} traité{readMessages > 1 ? "s" : ""} sur {stats.total_messages}.
             </p>
           </section>
         </aside>
