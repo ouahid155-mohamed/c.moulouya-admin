@@ -1,0 +1,355 @@
+.sp-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.sp-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.sp-page-title {
+  font-family: var(--sans);
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0 0 6px;
+}
+
+.sp-page-subtitle {
+  color: var(--text);
+  font-size: 14px;
+  margin: 0;
+}
+
+.sp-add-btn {
+  background: linear-gradient(135deg, var(--accent) 0%, #0A2E72 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(19, 118, 248, 0.2);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.sp-add-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.sp-loading {
+  padding: 80px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.sp-empty-box {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.sp-alert {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sp-alert--success {
+  background-color: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
+}
+
+.sp-alert--error {
+  background-color: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+/* Table */
+.sp-table-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.sp-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.sp-table th {
+  background-color: #f9fafb;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 20px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sp-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-h);
+  vertical-align: middle;
+}
+
+.inactive-row td {
+  opacity: 0.6;
+}
+
+.sp-td-order {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.sp-td-title {
+  font-weight: 600;
+}
+
+.ar-text {
+  font-family: var(--sans);
+}
+
+.sp-td-desc {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--text);
+}
+
+/* Badges */
+.sp-status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.sp-status-badge.active {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.sp-status-badge.inactive {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+/* Actions */
+.sp-table-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.sp-edit-action {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sp-edit-action:hover {
+  text-decoration: underline;
+}
+
+.sp-delete-action {
+  background: none;
+  border: none;
+  color: #dc2626;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.sp-delete-action:hover {
+  text-decoration: underline;
+}
+
+/* Modal */
+.sp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.sp-modal-card {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.sp-modal-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sp-modal-header h3 {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-h);
+  margin: 0;
+}
+
+.sp-close-modal {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: var(--text);
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.sp-modal-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sp-modal-fields-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.sp-modal-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sp-modal-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.sp-modal-field input,
+.sp-modal-field textarea {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-h);
+  outline: none;
+  background-color: #fff;
+}
+
+.sp-modal-field input:focus,
+.sp-modal-field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(19, 118, 248, 0.1);
+}
+
+.sp-modal-field-checkbox {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.checkbox-label input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.sp-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 10px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.sp-cancel-btn {
+  background-color: #f3f4f6;
+  color: var(--text-h);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sp-cancel-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.sp-save-btn {
+  background: linear-gradient(135deg, var(--accent) 0%, #0A2E72 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(19, 118, 248, 0.2);
+}
+
+.sp-save-btn:hover {
+  opacity: 0.95;
+}
+
+.sp-save-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
