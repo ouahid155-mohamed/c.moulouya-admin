@@ -48,7 +48,7 @@ export default function ForgotPassword() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@cliniquemoulouya.ma"
+                autoComplete="email"
                 required
               />
             </div>

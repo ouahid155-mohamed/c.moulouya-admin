@@ -50,7 +50,7 @@ export default function Profile() {
     setLoading(true);
     try {
       await api.put("/admin/profile/request-email-change", emailForm);
-      notify("Email de confirmation envoyé à votre adresse actuelle ✓");
+      notify("Email de confirmation envoyé à votre nouvelle adresse ✓");
       setEmailForm({ new_email: "" });
     } catch (err) {
       notify(err.response?.data?.message || "Erreur", "error");
@@ -152,11 +152,11 @@ export default function Profile() {
               value={emailForm.new_email}
               onChange={(e) => setEmailForm({ new_email: e.target.value })}
               required
-              placeholder="nouveau@email.com"
+              autoComplete="email"
             />
           </div>
           <p className="pf-hint">
-            Un email de confirmation sera envoyé à votre adresse actuelle.
+            Un email de confirmation sera envoyé à votre nouvelle adresse.
           </p>
           <button className="pf-btn" type="submit" disabled={loading}>
             {loading ? "Envoi..." : "Envoyer la confirmation"}
