@@ -89,9 +89,9 @@ const Login = () => {
                 id="email"
                 type="email"
                 className="form-input"
-                placeholder="admin@moulouya.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
+                autoComplete="email"
                 required
                 disabled={loading}
               />
@@ -113,9 +113,9 @@ const Login = () => {
                 id="password"
                 type="password"
                 className="form-input"
-                placeholder="••••••••"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
+                autoComplete="current-password"
                 required
                 disabled={loading}
               />
